@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AppTareas>
+
+  <!-- Pantalla de formulario -->
+  <Pantalla id="pantallaAgregar" tipo="formulario">
+    <Titulo text="Agregar Nueva Tarea" />
+    <Formulario id="formAgregarTarea">
+      <Input id="titulo" placeholder="¿Qué tienes que hacer?" required="true" />
+      <Textarea id="descripcion" placeholder="Detalles (opcional)" rows="4" />
+      <Boton id="btnAgregar" text="Agregar Tarea" onClick="agregarTarea()" />
+      <Boton id="btnAgregarVer" text="Agregar y Ver Lista" onClick="agregarYVerLista()" color="#FF9800" />
+    </Formulario>
+  </Pantalla>
+
+  <!-- Pantalla de lista -->
+  <Pantalla id="pantallaLista" tipo="dashboard">
+    <Contador id="contador" text="Total de tareas: {n}" />
+    <Contenedor id="listaTareas">
+      <MensajeVacio id="sinTareas" text="No hay tareas aún." />
+      <Tarea id="tarea{n}">
+        <Titulo text="{titulo}" />
+        <Descripcion text="{descripcion}" />
+        <Estado id="estado{n}" text="{estado}" clase="{pendiente|completada}" />
+        <Boton text="Completar/React." onClick="cambiarEstado({n})" />
+        <Boton text="Eliminar" onClick="eliminarTarea({n})" />
+      </Tarea>
+    </Contenedor>
+  </Pantalla>
+
+  <!-- Navegación -->
+  <Navegacion>
+    <Tab id="tabAgregar" text="➕ Agregar Tarea" onClick="mostrarPantalla('pantallaAgregar')" activo="true" />
+    <Tab id="tabLista" text="📋 Ver Tareas" onClick="mostrarPantalla('pantallaLista')" />
+  </Navegacion>
+
+</AppTareas>

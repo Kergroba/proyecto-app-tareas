@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Tareas - Proyecto Final</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Mi Lista de Tareas</h1>
+        
+        <!-- Navegación entre pantallas -->
+        <div class="navegacion">
+            <button class="tab-button activo" onclick="mostrarPantalla('pantallaAgregar')">➕ Agregar Tarea</button>
+            <button class="tab-button" onclick="mostrarPantalla('pantallaLista')">📋 Ver Tareas</button>
+        </div>
+
+        <!-- Pantalla 1: Agregar Tarea -->
+        <div class="pantalla activa" id="pantallaAgregar">
+            <div class="form-box">
+                <h3>Agregar Nueva Tarea</h3>
+                <input type="text" id="titulo" placeholder="¿Qué tienes que hacer?">
+                <textarea id="descripcion" placeholder="Detalles (opcional)" rows="4"></textarea>
+                <button onclick="agregarTarea()">Agregar Tarea</button>
+                <button onclick="agregarYVerLista()" style="background: #FF9800;">Agregar y Ver Lista</button>
+            </div>
+        </div>
+
+        <!-- Pantalla 2: Ver Lista de Tareas -->
+        <div class="pantalla" id="pantallaLista">
+            <!-- Contador simple -->
+            <div class="contador">
+                Total de tareas: <span id="contador">0</span>
+            </div>
+
+            <!-- Lista de tareas -->
+            <div id="listaTareas">
+                <div class="sin-tareas" id="sinTareas">
+                    No hay tareas aún. ¡Ve a "Agregar Tarea" para crear tu primera tarea!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

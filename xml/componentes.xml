@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentesAppTareas>
+
+  <!-- Componente: Botón -->
+  <Componente id="Boton">
+    <Propiedad nombre="text" tipo="string" descripcion="Texto que aparece en el botón" />
+    <Propiedad nombre="color" tipo="hex" descripcion="Color de fondo del botón" />
+    <Propiedad nombre="onClick" tipo="evento" descripcion="Función que se ejecuta al hacer clic" />
+    <Estilos padding="12px 20px" borderRadius="5px" fontSize="16px" colorTexto="#FFFFFF" />
+  </Componente>
+
+  <!-- Componente: Input de texto -->
+  <Componente id="InputTexto">
+    <Propiedad nombre="id" tipo="string" descripcion="Identificador del campo" />
+    <Propiedad nombre="placeholder" tipo="string" descripcion="Texto de ejemplo" />
+    <Propiedad nombre="required" tipo="boolean" descripcion="Indica si es obligatorio" />
+    <Estilos padding="10px" border="1px solid #ccc" borderRadius="5px" fontSize="16px" width="100%" />
+  </Componente>
+
+  <!-- Componente: Área de texto -->
+  <Componente id="Textarea">
+    <Propiedad nombre="id" tipo="string" />
+    <Propiedad nombre="placeholder" tipo="string" />
+    <Propiedad nombre="rows" tipo="number" />
+    <Estilos igualA="InputTexto" />
+  </Componente>
+
+  <!-- Componente: Selector de estado -->
+  <Componente id="SelectorEstado">
+    <Option value="pendiente" text="Pendiente" />
+    <Option value="completada" text="Completada" />
+    <Estilos igualA="InputTexto" />
+  </Componente>
+
+  <!-- Componente: Tarjeta de tarea -->
+  <Componente id="TarjetaTarea">
+    <Elemento tipo="Titulo" text="Título de la tarea" fontWeight="bold" fontSize="16px" />
+    <Elemento tipo="Descripcion" text="Texto descriptivo" fontSize="14px" color="#666" />
+    <Elemento tipo="Estado" clase="pendiente|completada" />
+    <Elemento tipo="BotonAccion" text="Completar o Reactivar" />
+    <Elemento tipo="BotonEliminar" text="Eliminar" />
+    <Estilos fondo="#FAFAFA" border="1px solid #DDD" borderRadius="10px" padding="15px" />
+  </Componente>
+
+</ComponentesAppTareas>

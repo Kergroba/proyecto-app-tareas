@@ -1,0 +1,6 @@
+<Component id="TaskCard">
+  <Container layout="horizontal" border="1px solid #ccc" padding="10px" margin="5px" radius="8px">
+    <Text id="taskTitle" text="{title}" bold="true" />
+    <Text id="taskStatus" text="{estado}" color="#888" />
+  </Container>
+</Component>
