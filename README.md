@@ -1,18 +1,18 @@
-#App de Tareas Interactiva
+# App de Tareas Interactiva
 
 Este repositorio contiene el proyecto final para la asignatura **Desarrollo de Interfaces 1º curso **, desarrollado como una aplicación web para gestionar tareas de forma sencilla,
 visual y eficiente.
 
 ---
 
-#Objetivo de la app
+## Objetivo de la app
 
 El objetivo es permitir a cualquier usuario agregar, visualizar, completar o eliminar tareas desde una interfaz clara, con comportamiento dinámico, navegación fluida 
 y estructura organizada.
 
 ---
 
-#Estructura y flujo
+## Estructura y flujo
 
 - **Pantalla 1: Agregar Tarea**
   - Formulario con campos: título (obligatorio) y descripción (opcional)
